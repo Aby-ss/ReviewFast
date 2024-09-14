@@ -37,7 +37,7 @@ def get_commits():
         commit_hash, author_name, commit_date, commit_message = commit_output.split(", ", 3)
         
         # Print the commit logs
-        print(Panel.fit(f"Author : [b]{author_name}[/b]\nCommit Message : {commit_message}\n[b]Extras :[/b]\nCommit Hash : {commit_hash}\nCommit Date : {commit_date}", title=f"{repo_name}", title_align="left", border_style="bold blue"))
+        print(Panel.fit(f"Author : [b]{author_name}[/b]\nCommit Message : [b]{commit_message}[/b]\n[b]--------------- Extras ---------------[/b]\nCommit Hash : {commit_hash}\nCommit Date : {commit_date}", title=f"{repo_name}", title_align="left", border_style="bold blue"))
     except subprocess.CalledProcessError as e:
         print(f"Error fetching commit logs: {e}")
 
